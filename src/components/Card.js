@@ -6,20 +6,13 @@ const dateName = date.getDate();
 const monthName = date.getMonth();
 const currentYear = date.getFullYear();
 
-// // CSS3
-// const headingstyle = {
-//   backgroundColor : "red",
-//   color : "white",
-//   textAlign : "center",
-//   padding : "15px"
-  
-// }
 
 //functional component 
-function Card(){
+function Card(props){
+  const {titleText, descText}= props;
   return <div className='card'>
-           <h1 className='cardheadr'>{maruf}</h1>
-           <p className='cardDeatils'>{mamun}</p>
+           <h1 className='cardheadr'>{titleText}</h1>
+           <p className='cardDeatils'>{descText}</p>
            <p className='cardFoter'>{dateName + " / " + monthName + " / " + currentYear}</p>
         </div>
 }
